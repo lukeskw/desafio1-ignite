@@ -117,10 +117,10 @@ export function TaskList() {
             onChange={(e) => setNewTaskTitle(e.target.value)}
             // value=//{newTaskTitle}
           />
-          <button type="submit" data-testid="add-task-button" id="addButton" onClick={(e)=> {handleCreateNewTask() ; clearInput(e)}}>
+          <button type="submit" data-testid="add-task-button" id="addButton" title="Adicionar Task" onClick={(e)=> {handleCreateNewTask() ; clearInput(e)}}>
             <FiCheckSquare size={16} color="#fff"/>
           </button>
-          <button type="submit" data-testid="delete-all-task-button" onClick={handleDeleteAllTask}>
+          <button type="submit" data-testid="delete-all-task-button" title="Excluir todas as tasks" onClick={handleDeleteAllTask}>
             <FiTrash size={16} color="#fff"/>
           </button>
           </form>
