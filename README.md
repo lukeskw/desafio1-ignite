@@ -1,4 +1,4 @@
-# desafio1-ignite
+# Desafio 1 - Rocketseat Ignite
 
 ## Nesse desafio foi criada uma aplicação para treinar o que aprendemos em manipulação de estados no ReactJS
 
