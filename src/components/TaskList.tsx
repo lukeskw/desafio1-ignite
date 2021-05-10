@@ -88,6 +88,15 @@ export function TaskList() {
     //console.log(removeTask)
     setTasks(removeTask)
   }
+
+  function handleDeleteAllTask() {
+    // Remova uma task da listagem pelo ID
+    // const removeTask = tasks.filter( task => {
+    //   return task.id !==id
+    // })
+    //console.log(removeTask)
+    setTasks([]);
+  }
   function clearInput(e) {
     e.preventDefault();
     document.getElementById("myForm").reset()
@@ -108,8 +117,11 @@ export function TaskList() {
             onChange={(e) => setNewTaskTitle(e.target.value)}
             // value=//{newTaskTitle}
           />
-          <button type="submit" data-testid="add-task-button" onClick={(e)=> {handleCreateNewTask() ; clearInput(e)}}>
+          <button type="submit" data-testid="add-task-button" id="addButton" onClick={(e)=> {handleCreateNewTask() ; clearInput(e)}}>
             <FiCheckSquare size={16} color="#fff"/>
+          </button>
+          <button type="submit" data-testid="delete-all-task-button" onClick={handleDeleteAllTask}>
+            <FiTrash size={16} color="#fff"/>
           </button>
           </form>
         </div>
